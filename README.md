@@ -7,7 +7,7 @@ Este programa simula as seguintes
  operaçoes de um caixa eletronico:
 
  - [x] Rota de boas vindas 
- - [] Rota extrato 
+ - [x] Rota extrato 
  - [] Rota saldo
  - [] Rota deposito
  - [] Rota saque
