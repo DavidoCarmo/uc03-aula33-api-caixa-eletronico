@@ -9,3 +9,13 @@ GET http://localhost:5000/conta/1313-0
 ### saldo
 
 GET http://localhost:5000/conta/1313-0/saldo
+
+
+###deposito DINHEIRO
+POST  http://localhost:5000/conta/1313-0/deposito
+Content-Type: application/json
+
+{
+    "valor": 100,   
+    "tipo": "DINHEIRO"
+}

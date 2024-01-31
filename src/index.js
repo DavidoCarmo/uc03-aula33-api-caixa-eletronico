@@ -101,6 +101,40 @@ app.get('/conta/:numero_conta/saldo', (request, response) => {
 
 
 
+//=============================================================================
+
+//Rota deposito
+
+app.post('/conta/:numero_conta/deposito',(request,response) =>{
+    const {numero_conta} = request.params;
+
+    const {valor, tipo} = request.body;
+
+
+    //validar se a conta existe 
+    const contaEncontrada = contas.find(
+        (conta) => conta.numero_conta === numero_conta)
+    
+if(!contaEncontrada){
+    response.send({
+        "error": "Contra nao encontrada"
+    })
+}
+    //validar se o valor e positivo 
+    if (!valor || valor <= 0){
+        response.send({
+            "error": "Valor Invalido"})
+    //validar qual o tipo de deposito (dinheiro e cheque)
+    if(!tipo){response.send({
+        "error": "tipo invalido"
+      })
+    }else if (tipo.toUpperCase() === 'DINHEIRO'){
+        //TODO validar se e inteiro
+    }
+}})
+
+
+
 
 
 

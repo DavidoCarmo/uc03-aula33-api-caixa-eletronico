@@ -7,9 +7,9 @@ Este programa simula as seguintes
  operaçoes de um caixa eletronico:
 
  - [x] Rota de boas vindas 
- - [x] Rota extrato 
- - [] Rota saldo
- - [] Rota deposito
+ - [] Rota extrato 
+ - [x] Rota saldo
+ - [x] Rota deposito
  - [] Rota saque
 
 Nao esta contemplado o acesso via cartao e senhae nem salvamento de informacoes em um bancoa de dados.
