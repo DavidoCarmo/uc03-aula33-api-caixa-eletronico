@@ -4,7 +4,7 @@ import Transacao from './entidades/transacao.js'
 
 const app = express()
 const port = 5000
-
+ 
 app.use(express.json())
 
 let contas = []

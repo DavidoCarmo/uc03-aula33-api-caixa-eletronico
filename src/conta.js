@@ -8,6 +8,6 @@ export default class Conta{
         this.numero_conta = numero_conta;
         this.tipo_conta = tipo_conta;
         this.transacoes = transacoes || [];//lisat de objetos de trasacao
-        this.saldo = 0
+        this.saldo = 0 
     }
 }

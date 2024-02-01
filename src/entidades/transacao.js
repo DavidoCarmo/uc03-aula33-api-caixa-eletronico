@@ -6,6 +6,6 @@ export default  class Transacao{
         this.tipo = tipo;
         this.valor = valor;
         this.descricao = descricao;
-        
+         
     }
 }

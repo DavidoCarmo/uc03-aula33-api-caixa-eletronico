@@ -8,6 +8,6 @@ export default class Pessoa {
     this.cpf = cpf;
     this.rg = rg;
     this.data_nascimento = data_nascimento;
-    }
+    } 
 
 }
