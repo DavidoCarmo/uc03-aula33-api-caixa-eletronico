@@ -1,5 +1,5 @@
 import express from 'express'
-import Conta from './conta.js'
+import Conta from './entidades/conta.js'
 import Transacao from './entidades/transacao.js'
 
 const app = express()
