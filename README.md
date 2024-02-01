@@ -33,11 +33,11 @@ de requisicoes validando que o valir precisa sert um numero inteiro se for dinhe
 ```json
 {
      "valor":100,
-     "tipo" "DINHEIRO"
+     "tipo_deposito" "DINHEIRO"
 }
 {
     "valor":100.02,
-    "tipo": "CHEQUE"
+    "tipo_deposito": "CHEQUE"
 }
 ```
 
