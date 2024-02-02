@@ -19,3 +19,14 @@ Content-Type: application/json
     "valor": 100,   
     "tipo": "DINHEIRO"
 }
+
+
+
+###LOGIN
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "fulano@gmail.com",   
+    "senha": "123456"
+}
