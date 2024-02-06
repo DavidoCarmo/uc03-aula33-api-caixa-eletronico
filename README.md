@@ -6,15 +6,37 @@ Aplicaçao criada durante as aulas de curso
 Este programa simula as seguintes
  operaçoes de um caixa eletronico:
 
+ - [] Rota de cadastro de pessoa
+ - [] Rota de atualização de cadastro
+ - [] Rota obter os dados de pessoa
+ - [] Rota de exclusão de pessoa
  - [x] Rota de boas vindas 
- - [] Rota extrato 
+ - [] Rota de criação de conta
+ - [] Rota extrato de trasaçoes com saldo
  - [x] Rota saldo
  - [x] Rota deposito
  - [] Rota saque
-
 Nao esta contemplado o acesso via cartao e senhae nem salvamento de informacoes em um bancoa de dados.
 
 ## regras do negocio
+
+### POST /pessoa/cadastro
+Rota de cadastro de pessoa, onde deverá ser informado o nome completo, cpf, nome de usuario (nickname) e senha.
+
+### PATCH /pessoas/:usuario_id/atualizacao
+Rota de atualização de cadastro de pessoa validar se o usuario da sessao e a propria pessoa e so vai atualizar nome completo, cpf, nome usuario e senha. Caso seja um bancario, pode atualizar apenas o nome completo, cpf e privilegio para o cliente.
+
+### GET /pessoa/:usuario_id
+Rota de obter os dados da pessoa pelo id. Quando for cliente,retornar os dados dele mesmo, nao permitira consultar outros usuario.
+Senão, se for um bancario, pode consultar todas as pessoas.
+
+### DELETE /pessoa/:usuario_id
+
+ Rota de cadastro de pessoa
+ Rota de atualização de cadastro
+ Rota obter os dados de pessoa
+ Rota de exclusão de pessoa
+
 
 Na rota de deposicao vai receber a conta do parametro e o valor pelo corpo 
 de requisicoes validando que o valir precisa sert um numero inteiro se for dinheiro e qualquer valor se for cheque  nao debe permitir depositos de valores negativos
