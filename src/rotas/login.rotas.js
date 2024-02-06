@@ -1,30 +1,40 @@
-import { Router } from "express";
+import { Router } from 'express'
+import jwtUtils from '../utils/jwt.utils.js'
+
 
 const router = Router()
 
 const usuarios = [{
-    email: 'fulano@gmail.com',
-    senha: '123456'
+  usuario_id: '2f7af142-01bd-478d-b19c-7d34b176b0cd',
+  email: 'fulano@email.com',
+  senha: '123456'
 }]
 
 router.post("/login", (request, response) => {
-    const { email, senha } = request.body
+  const { email, senha } = request.body
 
-const usuario = usuarios.find((usuario) => usuario.email === email)
+  const usuario = usuarios.find((usuario) => usuario.email === email)
 
-if(!usuario){
-    response.send({error: "Usuario invalido"})
-}
-//GERAR JSON WEB TOKEN 
-//DESENVOLVER PARA O USUARIO
-if (usuario.senha === senha){
-    response.send({message: "Usuario Autenticado"})
-}else {
-    response.send({message: "Usuario invalido"})
-}
+  if (!usuario) {
+    response.send({ error: "Usuário inválido" })
+  }
+
+  if (usuario.senha === senha) {
+    // gera o JWT - JSON Web Token
+    const payload = {
+      usuario_id: usuario.usuario_id,
+      email: usuario.email
+    }
+    const token = jwtUtils.generateToken(payload)
+
+    response.send({
+      message: "Usuário autenticado",
+      jwt: token
+    })
+  } else {
+    response.send({ error: "Usuário inválido" })
+  }
 
 })
-
-
 
 export default { router }
