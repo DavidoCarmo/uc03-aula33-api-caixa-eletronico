@@ -27,3 +27,14 @@ Content-Type: application/json
   "email": "fulano@email.com",
   "senha": "123456"
 }
+
+### Cadastro pessoa
+POST http://localhost:5000/pessoas/cadastro
+Content-Type: application/json
+
+{
+  "nome_completo": "Davi do Carmo",
+  "cpf": "123456789",
+  "usuario": "Davi",
+  "senha": "123456"
+}
