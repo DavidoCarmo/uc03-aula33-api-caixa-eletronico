@@ -28,8 +28,17 @@ Content-Type: application/json
   "senha": "123456"
 }
 
+### Login pessoa
+POST http://localhost:5000/pessoas/login
+Content-Type: application/json
+
+{
+  "usuario": "Davi",
+  "senha": "123456"
+}
+
 ### Cadastro pessoa
-POST http://localhost:5000/pessoas/cadastro
+POST http://localhost:5000/pessoas/cadastrar
 Content-Type: application/json
 
 {
