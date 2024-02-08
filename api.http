@@ -47,3 +47,14 @@ Content-Type: application/json
   "usuario": "Davi",
   "senha": "123456"
 }
+### Atualizar dados pessoa
+POST http://localhost:5000/pessoas/b674a97a-3b6b-4f8e-bb66-d4a21611bfc6/atualizar
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZXNzb2FfaWQiOiJiNjc0YTk3YS0zYjZiLTRmOGUtYmI2Ni1kNGEyMTYxMWJmYzYiLCJwcml2aWxlZ2lvIjoic2VtLWFjZXNzbyIsImlhdCI6MTcwNzM1Mzg3NiwiZXhwIjoxNzA3MzU3NDc2fQ.wqjpFh0CrYvvKavJd8XRRg3Is8iRR3jFWpUjMCfA_6c
+
+{
+  "nome_completo": "Davi Bertan",
+  "cpf": "12345674343",
+  "usuario": "Davi",
+  "senha": "123456"
+}
